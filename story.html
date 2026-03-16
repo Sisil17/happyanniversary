@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Cerita Awal Kita</title>
+
+<style>
+
+body{
+font-family:Georgia, serif;
+background:linear-gradient(135deg,#ff758c,#ff7eb3);
+min-height:100vh;
+text-align:center;
+color:white;
+padding:40px;
+overflow-x:hidden;
+}
+
+/* JUDUL */
+
+.title{
+font-size:42px;
+margin-bottom:5px;
+}
+
+.subtitle{
+font-size:20px;
+margin-bottom:35px;
+opacity:0.9;
+}
+
+/* HALAMAN BUKU */
+
+.card{
+background:#fffdf7;
+color:#333;
+max-width:850px;
+margin:auto;
+padding:50px;
+border-radius:12px;
+box-shadow:
+0 15px 30px rgba(0,0,0,0.25),
+inset 0 0 20px rgba(0,0,0,0.05);
+line-height:2;
+font-size:19px;
+text-align:center;
+position:relative;
+}
+
+/* EFEK BUKU */
+
+.card:before{
+content:"";
+position:absolute;
+left:0;
+top:0;
+width:6px;
+height:100%;
+background:#f2d7d5;
+border-radius:10px 0 0 10px;
+}
+
+/* PARAGRAF */
+
+.card p{
+margin-bottom:20px;
+}
+
+/* FOTO */
+
+.photo{
+width:250px;
+border-radius:15px;
+margin:30px auto;
+display:block;
+box-shadow:0 10px 20px rgba(0,0,0,0.3);
+}
+
+/* PESAN AKHIR */
+
+.loveMessage{
+display:none;
+font-size:24px;
+color:#ff3e6c;
+font-weight:bold;
+margin-top:30px;
+animation:fadeIn 2s;
+}
+
+/* BUTTON */
+
+button{
+background:#ff4d6d;
+border:none;
+color:white;
+padding:12px 25px;
+border-radius:25px;
+font-size:16px;
+cursor:pointer;
+margin-top:35px;
+}
+
+/* LOVE JATUH */
+
+.heart{
+position:fixed;
+top:-10px;
+font-size:20px;
+animation:fall linear infinite;
+}
+
+@keyframes fall{
+to{transform:translateY(110vh);}
+}
+
+/* CONFETTI */
+
+.confetti{
+position:fixed;
+top:-10px;
+font-size:18px;
+animation:confettiFall linear forwards;
+}
+
+@keyframes confettiFall{
+to{
+transform:translateY(110vh) rotate(720deg);
+}
+}
+
+/* ANIMASI */
+
+@keyframes fadeIn{
+from{opacity:0}
+to{opacity:1}
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h1 class="title">💑 Cerita Awal Kita</h1>
+<p class="subtitle">Bagaimana semuanya dimulai</p>
+
+<div class="card">
+
+<p id="story"></p>
+
+<img src="zhikosisil.png" class="photo">
+
+<div id="loveMessage" class="loveMessage">
+💌 Aku bersyukur dipertemukan denganmu.  
+Semoga cerita kita terus berlanjut selamanya. ❤️
+</div>
+
+</div>
+
+<a href="index.html">
+<button>⬅ Kembali ke Anniversary</button>
+</a>
+
+<script>
+
+/* CERITA */
+
+const text = `
+
+Semua berawal pada bulan Desember tahun 2022.
+
+Saat itu aku bahkan belum mengenalmu.
+Aku juga tidak tahu bahwa di dunia ini
+ada seseorang yang nantinya akan menjadi
+begitu penting dalam hidupku.
+
+Suatu hari kamu melihat aku
+sedang berjalan bersama teman-temanku.
+
+Kamu memperhatikanku dari jauh,
+lalu kamu berkata kepada temanmu
+bahwa aku terlihat cantik atau manis.
+
+Dari momen kecil itulah
+cerita kita mulai berjalan.
+
+Temanmu kemudian mengatakan
+bahwa aku ternyata sekampung dengan dia.
+
+Sejak saat itu kamu mulai penasaran tentang aku.
+
+Beberapa waktu kemudian
+kamu melihat aku lagi di kantin,
+tetapi kamu lupa siapa namaku.
+
+Akhirnya kamu bertanya lagi kepada temanmu
+yang kebetulan sekelas denganmu
+dan juga sekampung denganku.
+
+Dari situlah kamu akhirnya tahu
+bahwa namaku adalah Sisil.
+
+Singkat cerita,
+kamu mulai bertanya banyak hal tentang aku.
+
+Temanmu sempat mengatakan
+bahwa sepertinya aku pernah punya pacar,
+tetapi dia juga tidak yakin
+apakah aku masih punya pacar atau tidak.
+
+Namun dia tetap memberikan
+Instagramku kepadamu.
+
+Setelah itu kamu melihat
+foto-fotoku di sorotan Instagram.
+
+Lalu kamu memutuskan
+untuk follow Instagramku.
+
+Kamu bahkan sempat berkata
+kepada temanmu,
+
+"Kalau dia follow back aku,
+aku akan mencoba mendekatinya."
+
+Dan ternyata benar,
+tidak lama kemudian aku follow back kamu.
+
+Dari situlah semuanya benar-benar dimulai.
+
+Kamu kemudian menghubungiku
+melalui WhatsApp
+dan memintaku untuk menyimpan nomormu.
+
+Hari demi hari berlalu.
+
+Sampai akhirnya pada tanggal
+19 Februari 2023
+kita pergi first date.
+
+Kita makan bersama di Taman Sari.
+
+Jika diingat sekarang,
+rasanya lucu dan manis sekali.
+
+Karena itu adalah pertama kalinya
+aku keluar bersama seorang laki-laki
+sebagai pacar.
+
+Dan orang itu adalah kamu.
+
+Sejak saat itu
+kita semakin dekat.
+
+Kamu juga sering datang ke rumahku,
+dan kita mulai menghabiskan
+banyak waktu bersama.
+
+Hingga akhirnya pada tanggal
+18 Maret 2023
+kamu menyatakan perasaanmu kepadaku
+di rumahku.
+
+Aku masih ingat
+saat itu kamu terlihat malu-malu.
+
+Dan justru itu yang membuat
+momen itu terasa sangat manis.
+
+Sejak saat itu
+kita resmi menjalani hubungan bersama.
+
+Namun tidak lama setelah itu,
+sekitar dua bulan kemudian
+aku harus kehilangan ibuku.
+
+Saat itu aku merasa
+sangat sedih dan kehilangan.
+
+Dan di masa sulit itu
+kamu selalu ada di sampingku.
+
+Sejak saat itu
+kamu menjadi seseorang
+yang sangat berarti dalam hidupku.
+
+Kita sudah melewati banyak hal bersama.
+
+Tawa, kebahagiaan,
+kesedihan,
+dan berbagai perjuangan hidup
+kita lalui bersama.
+
+Tidak terasa
+waktu berjalan begitu cepat.
+
+Sekarang kita sudah bersama
+selama tiga tahun.
+
+Saat ini kita sedang menjalani
+hubungan jarak jauh.
+
+Kamu bekerja di Cikarang,
+sementara aku masih di Bangka
+melanjutkan kuliah.
+
+Walaupun jarak memisahkan kita,
+aku percaya cinta kita
+akan selalu kuat.
+
+Dan semoga perjalanan kita
+tidak berhenti sampai di sini.
+
+`;
+
+let i = 0;
+let speed = 30;
+
+function typeWriter(){
+
+if(i < text.length){
+
+document.getElementById("story").innerHTML += text.charAt(i);
+
+i++;
+
+setTimeout(typeWriter, speed);
+
+}else{
+
+showLoveMessage();
+launchConfetti();
+
+}
+
+}
+
+typeWriter();
+
+/* LOVE MESSAGE */
+
+function showLoveMessage(){
+
+document.getElementById("loveMessage").style.display="block";
+
+}
+
+/* CONFETTI */
+
+function launchConfetti(){
+
+for(let i=0;i<80;i++){
+
+let confetti=document.createElement("div");
+
+confetti.innerHTML=["🎉","✨","💖","💗"][Math.floor(Math.random()*4)];
+
+confetti.className="confetti";
+
+confetti.style.left=Math.random()*100+"%";
+
+confetti.style.animationDuration=(3+Math.random()*4)+"s";
+
+document.body.appendChild(confetti);
+
+}
+
+}
+
+/* LOVE JATUH */
+
+for(let i=0;i<25;i++){
+
+let heart=document.createElement("div");
+
+heart.innerHTML="❤️";
+
+heart.className="heart";
+
+heart.style.left=Math.random()*100+"%";
+
+heart.style.animationDuration=(3+Math.random()*6)+"s";
+
+document.body.appendChild(heart);
+
+}
+
+</script>
+
+</body>
+</html>
